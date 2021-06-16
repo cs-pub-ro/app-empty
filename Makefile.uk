@@ -1,0 +1,3 @@
+$(eval $(call addlib,appempty))
+
+APPEMPTY_SRCS-y += $(APPEMPTY_BASE)/main.c

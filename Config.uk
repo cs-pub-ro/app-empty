@@ -1,0 +1,5 @@
+menuconfig APPEMPTY_DEPENDENCIES
+        bool "Empty Application"
+        default y
+        select PLAT_KVM
+        select PLAT_LINUXU
