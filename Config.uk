@@ -3,3 +3,10 @@ menuconfig APPEMPTY_DEPENDENCIES
         default y
         select PLAT_KVM
         select PLAT_LINUXU
+        select OPTIMIZE_DEADELIM
+        select OPTIMIZE_LTO
+        select DEBUG_SYMBOLS_LVL0
+        select LIBUKARGPARSE
+        select LIBUKBOOT
+        select LIBUKBOOT_BANNER_NONE
+        select LIBUKBOOT_NOALLOC
