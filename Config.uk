@@ -2,7 +2,9 @@ menuconfig APPEMPTY_DEPENDENCIES
         bool "Empty Application"
         default y
         select PLAT_KVM
-        select PLAT_LINUXU
+        select LIBNEWLIBC
+        select LIB9PFS
+        select LIBUK9P
         select OPTIMIZE_DEADELIM
         select OPTIMIZE_LTO
         select DEBUG_SYMBOLS_LVL0

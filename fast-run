@@ -7,5 +7,8 @@ QEMU_PATH=/usr/bin/qemu-system-x86_64
 sudo perf stat sudo taskset -c 7 ${QEMU_PATH} \
     -enable-kvm -nographic -device isa-debug-exit \
     -kernel ${KERNEL_PATH} -m 20M \
+    -append "state 2000" \
+    -fsdev local,security_model=passthrough,id=hvirtio0,path=rootfs \
+    -device virtio-9p-pci,fsdev=hvirtio0,mount_tag=fs0 \
     -nodefaults -no-user-config -serial stdio \
     -cpu host,migratable=no,+invtsc
