@@ -3,3 +3,4 @@ menuconfig APPEMPTY_DEPENDENCIES
         default y
         select PLAT_KVM
         select PLAT_LINUXU
+        select LIBNOLIBC if !HAVE_LIBC
