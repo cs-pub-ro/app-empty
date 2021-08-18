@@ -5,7 +5,7 @@ It is used to simulate the update of a (persistent) state with command line argu
 
 The resulting executable is passed two command line arguments:
 
-* the file in the filesystem that is to be update (it contains a serialized integer value);
+* the file in the filesystem that is to be updated (it contains a serialized integer value);
   the file has to be part of the filesystem
 * the value (integer, positive or negative) that will be added to the value in the file
 
@@ -50,7 +50,7 @@ Run the application in QEMU/KVM using the `qemu-guest` script (it's copied from 
 $ ./qemu-guest -k build/app-empty_kvm-x86_64 -a "state 73" -e rootfs
 ```
 The `-a "state 73"` option means adding `73` to the value in `state`.
-As their is nothing in `state`, the new value will be `73`.
+As there is nothing in `state`, the new value will be `73`.
 ```
 $ xxd rootfs/state
 00000000: 4900 0000                                I...
